@@ -72,4 +72,9 @@ insert into books (id, author_id, title) values (23, 7, 'ABCDEF');
 insert into books (id, author_id, title) values (24, 3, 'ABCD');
 ```
 * Copy/paste the above into http://sqlfiddle.com/ , and then write a SQL query that will return:
-     * A
+     * author ID
+     * author first name
+     * author last name
+     * count of written books
+* For all authors with last name ‘Smith’. The results should include authors that have not written any books (with count “0”).
+* <b>Send back the SQL or a link to sqlfiddle.</b>
