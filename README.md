@@ -1,5 +1,9 @@
 # Tecnical_Interview_Questions
 Here are some questions I have recieved and had to solve for different technical interview here for your practice.
+
+#Introduction
+####Some of the content provided does not work 100%.  I chose the languages for the first two based on what I found easiest to work with and would solve the problem efficiently.  You can do these however you like and feel free to clone this down for practice.
+
 #Questions 
 ###1. <b>Palindromic Numbers</b>
   * How many palindromic numbers [http://en.wikipedia.org/wiki/Palindromic_number] are there in the set of numbers representable by a 16 bit unsigned integer [0..65535] ?
