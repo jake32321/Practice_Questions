@@ -71,3 +71,5 @@ insert into books (id, author_id, title) values (22, 8, 'ABCDEF');
 insert into books (id, author_id, title) values (23, 7, 'ABCDEF');
 insert into books (id, author_id, title) values (24, 3, 'ABCD');
 ```
+* Copy/paste the above into http://sqlfiddle.com/ , and then write a SQL query that will return:
+     * A
