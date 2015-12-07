@@ -19,7 +19,7 @@ Here are some questions I have recieved and had to solve for different technical
   * Given two tables defined as follows, and these insert statements:
   
 ```SQL 
-create table author (
+CREATE TABLE author (
 id int,
 first_name varchar(255),
 last_name varchar(255),
@@ -27,13 +27,14 @@ primary key (id),
 unique key name_uniq (first_name, last_name)
 );
  
-create table books (
+CREATE TABLE books (
 id int,
 author_id int,
 title varchar(255),
 primary key (id),
 constraint author_id_fk foreign key (author_id) references author (id)
 );
+
 insert into author (id, first_name, last_name) values (1, 'Adam', 'Smith');
 insert into author (id, first_name, last_name) values (2, 'Brian', 'Smith');
 insert into author (id, first_name, last_name) values (3, 'Charles', 'Smith');
@@ -44,6 +45,7 @@ insert into author (id, first_name, last_name) values (7, 'John', 'Jones');
 insert into author (id, first_name, last_name) values (8, 'Brian', 'Doe');
 insert into author (id, first_name, last_name) values (9, 'John', 'Doe');
 insert into author (id, first_name, last_name) values (10, 'Jack', 'Dorsey');
+
 insert into books (id, author_id, title) values (1, 1, 'ABCD');
 insert into books (id, author_id, title) values (2, 1, 'ABCDE');
 insert into books (id, author_id, title) values (3, 1, 'ABCDEF');
