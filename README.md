@@ -18,3 +18,54 @@ Here are some questions I have recieved and had to solve for different technical
 ###4. <b>SQL</b>
   * Given two tables defined as follows, and these insert statements:
   
+```SQL 
+create table author (
+id int,
+first_name varchar(255),
+last_name varchar(255),
+primary key (id),
+unique key name_uniq (first_name, last_name)
+);
+ 
+create table books (
+id int,
+author_id int,
+title varchar(255),
+primary key (id),
+constraint author_id_fk foreign key (author_id) references author (id)
+);
+insert into author (id, first_name, last_name) values (1, 'Adam', 'Smith');
+insert into author (id, first_name, last_name) values (2, 'Brian', 'Smith');
+insert into author (id, first_name, last_name) values (3, 'Charles', 'Smith');
+insert into author (id, first_name, last_name) values (4, 'Darcy', 'Smith');
+insert into author (id, first_name, last_name) values (5, 'Adam', 'Jones');
+insert into author (id, first_name, last_name) values (6, 'Jason', 'Jones');
+insert into author (id, first_name, last_name) values (7, 'John', 'Jones');
+insert into author (id, first_name, last_name) values (8, 'Brian', 'Doe');
+insert into author (id, first_name, last_name) values (9, 'John', 'Doe');
+insert into author (id, first_name, last_name) values (10, 'Jack', 'Dorsey');
+insert into books (id, author_id, title) values (1, 1, 'ABCD');
+insert into books (id, author_id, title) values (2, 1, 'ABCDE');
+insert into books (id, author_id, title) values (3, 1, 'ABCDEF');
+insert into books (id, author_id, title) values (4, 4, 'ABCD');
+insert into books (id, author_id, title) values (5, 4, 'ABCDE');
+insert into books (id, author_id, title) values (6, 5, 'ABCD');
+insert into books (id, author_id, title) values (7, 6, 'ABCD');
+insert into books (id, author_id, title) values (8, 7, 'ABCD');
+insert into books (id, author_id, title) values (9, 8, 'ABCD');
+insert into books (id, author_id, title) values (10, 9, 'ABCD');
+insert into books (id, author_id, title) values (11, 10, 'ABCD');
+insert into books (id, author_id, title) values (12, 5, 'ABCDE');
+insert into books (id, author_id, title) values (13, 6, 'ABCDE');
+insert into books (id, author_id, title) values (14, 5, 'ABCDEF');
+insert into books (id, author_id, title) values (15, 6, 'ABCDEF');
+insert into books (id, author_id, title) values (16, 7, 'ABCDE');
+insert into books (id, author_id, title) values (17, 8, 'ABCDE');
+insert into books (id, author_id, title) values (18, 9, 'ABCDE');
+insert into books (id, author_id, title) values (19, 10, 'ABCDE');
+insert into books (id, author_id, title) values (20, 10, 'ABCDEF');
+insert into books (id, author_id, title) values (21, 9, 'ABCDEF');
+insert into books (id, author_id, title) values (22, 8, 'ABCDEF');
+insert into books (id, author_id, title) values (23, 7, 'ABCDEF');
+insert into books (id, author_id, title) values (24, 3, 'ABCD');
+```
